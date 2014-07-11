@@ -24,7 +24,7 @@ def region_instances_list():
 
     def safeTags(tags):
         try:
-            return tags.items()
+            return map(lambda x: "%s:%s" %  (x[0],x[1]),  tags.iteritems() ) 
         except:
             return "error"
 
